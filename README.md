@@ -1,7 +1,7 @@
-# ReportFix AI — Report. Respond. Resolve. Verify.
+# ReportFix AI
 
-AI-powered campus complaint management and **verified problem resolution** for a military college environment
-(CODE QUEST 2026 AI Module Hackathon). Python + Streamlit + SQLite + any OpenAI-compatible LLM API.
+AI-powered campus complaint management and **verified problem resolution** for a college environment
+(CODE QUEST 2026 AI Module Hackathon). Python + Streamlit + SQLite + any Gemini API.
 
 > All campus locations, accounts and complaints in the demo are **fictional demonstration data**.
 > They are not a claim that any facility exists at a real college.
@@ -43,11 +43,7 @@ python tests\scenarios.py --ai       :: same, classification through the configu
 
 ## 2. AI API connection
 
-* Any provider exposing an **OpenAI-compatible `/chat/completions`** endpoint works (e.g. OpenAI, Groq, OpenRouter,
-  Together, a local Ollama server at `http://localhost:11434/v1`). Set `AI_BASE_URL` and `AI_MODEL` accordingly —
-  the model can be changed without touching code.
-* Optional `AI_EMBED_MODEL` enables embedding-based semantic similarity for duplicates (`/embeddings`).
-* Admin → **AI Settings** → *Test AI connection*. The key is never displayed.
+* Gemini API from personal Gemini Plus account.
 * If the key is missing, the network fails, or the model returns invalid JSON, the app **keeps working** in a clearly
   labelled *fallback mode* (rule-based multilingual classifier). Fallback is **not** claimed to be equivalent to AI.
 * Admin → AI Settings → *Simulate AI outage* lets judges demonstrate fallback live.
